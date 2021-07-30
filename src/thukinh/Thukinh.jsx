@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GlassesItem from "./components/GlassesItem";
+import "./style.css";
 
 export default class Thukinh extends Component {
   state = {
@@ -68,11 +69,11 @@ export default class Thukinh extends Component {
         desc: "Light pink square lenses define these sunglasses, ending withamother of pearl effect tip. ",
       },
     ],
-    glassestest:"",
+    glassestest:{},
   };
-  clickitem=(url)=>{
+  clickitem=(item)=>{
       this.setState({
-        glassestest:url
+        glassestest:item
       })
   }
   render() {
@@ -87,11 +88,15 @@ export default class Thukinh extends Component {
           <h3>TRY CLASSES APP ONLINE</h3>
           <div className="photo-sample">
             <img src="./glassesImage/model.jpg" alt="" />
-            <img className="glasses-test" src={this.state.glassestest} alt="" />
+            <img className="glasses-test" src={this.state.glassestest.url} alt="" />
+            <div className={this.state.glassestest.url?"info opacity":"info"}>
+              <h5>{this.state.glassestest.name}</h5>
+              <p>{this.state.glassestest.desc}</p>
+            </div>
           </div>
           <div className="glasses-list">
             {this.state.arrProduct.map(item=>(
-                <GlassesItem key={item.id} url={item.url} clickitem={this.clickitem}/>
+                <GlassesItem key={item.id} item={item} clickitem={this.clickitem}/>
             ))}
           </div>
         </div>

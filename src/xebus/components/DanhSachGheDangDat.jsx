@@ -11,7 +11,6 @@ export default class DanhSachGheDangDat extends Component {
             Ghế : {item.TenGhe} $ {item.Gia}{" "}
             <span
               className="delete"
-              // onClick={() => this.props.deleteBook(item)}
             >
               [huy]
             </span>

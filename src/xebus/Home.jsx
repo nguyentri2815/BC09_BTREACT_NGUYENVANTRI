@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DanhSachGhe from "./components/DanhSachGhe";
 import DanhSachGheDangDat from "./components/DanhSachGheDangDat";
+import "./style.css";
 class Home extends Component {
   state = {
     ListSeats: [

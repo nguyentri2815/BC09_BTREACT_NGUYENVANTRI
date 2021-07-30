@@ -1,0 +1,93 @@
+.glasses .container{
+    background: 'url(img)';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    padding: 2rem 0;
+  }
+  .glasses .container::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: black;
+    opacity: 0.7;
+  }
+  .glasses h3{
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    border-top: 1px solid #e2dada;
+    position: relative;
+    z-index: 9;
+    background: #00000052;
+  }
+  .glasses .container{
+    min-height: 500px;
+  }
+  .photo-sample{
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+  }
+  .photo-sample img:first-child{
+    max-width: 200px;
+  }
+  .photo-sample .glasses-test{
+    position: absolute;
+      max-width: 100px;
+      background: transparent;
+      top: 60px;
+      left: 50%;
+    transform: translateX(-50%);
+  }
+  .glasses-list{
+    position: relative;
+    z-index: 9;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 80%;
+  }
+  .glasses-list .glasses-item{
+    max-width: 100px;
+    padding: 10px;
+    border: 1px solid #e2dada;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .glasses-list .glasses-item img{
+    width: 100%;
+  }
+  .info{
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      padding: 5px 15px;
+      background: #ff980075;
+      opacity: 0;
+  }
+  .opacity{
+      opacity: 1;
+  }
+  .info h5{
+      color: cornflowerblue;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0px;
+  }
+  .info p{
+      color: black;
+      font-size: 12px;
+      margin: 0;
+      margin-top: 10px;
+  }
